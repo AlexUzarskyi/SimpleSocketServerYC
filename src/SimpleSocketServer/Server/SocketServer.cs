@@ -4,6 +4,7 @@ using System.Collections.Concurrent;
 using Serilog;
 using SimpleSocketServer.Models;
 using System.Text;
+
 namespace SimpleSocketServer.Server
 {
     public class SocketServer

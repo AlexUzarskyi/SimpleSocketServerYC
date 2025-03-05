@@ -1,5 +1,6 @@
 ﻿using Serilog;
 using SimpleSocketServer.Server;
+
 namespace SimpleSocketServer
 {
     class Program
