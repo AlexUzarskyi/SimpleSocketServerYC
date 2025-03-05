@@ -7,9 +7,11 @@ namespace SimpleSocketServer
         static async Task Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-            .MinimumLevel.Debug()
+            .MinimumLevel.Information()
             .WriteTo.Console()
             .CreateLogger();
+
+            // Could also set MinimumLevel.Debug()
 
             // Could also write to a file:
             // .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
@@ -17,10 +19,12 @@ namespace SimpleSocketServer
             try
             {
                 // just random port used for F5 debug
+                /*
                 if (args.Length == 0)
                 {
                     args = new string[] { "45577" };
                 }
+                */
 
                 if (args.Length == 0 || !int.TryParse(args[0], out int port))
                 {
